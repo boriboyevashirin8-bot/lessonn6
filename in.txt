@@ -1,0 +1,7 @@
+path: "/",
+element: <Catgoier/>,
+children: [
+    {
+        
+    }
+]

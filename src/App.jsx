@@ -1,21 +1,16 @@
 import React from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Header from "./components/Header";
-import CategoriesSection from "./components/CategoriesSection";
-import PaginationInfinite from "./components/PaginationInfinite";
+import MarketPage from "./components/MarketPage";
 
 const queryClient = new QueryClient();
 
 const App = () => {
   return (
-    <div>
+    <QueryClientProvider client={queryClient}>
       <Header />
-      <CategoriesSection />
-
-      <QueryClientProvider client={queryClient}>
-        <PaginationInfinite />
-      </QueryClientProvider>
-    </div>
+      <MarketPage />
+    </QueryClientProvider>
   );
 };
 

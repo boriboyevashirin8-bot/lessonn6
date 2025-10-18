@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {  Checkbox, Collapse, Button } from "antd";
+import { Checkbox, Collapse, Button } from "antd";
 import { motion } from "framer-motion";
 import {
   MdPhoneIphone,
@@ -15,7 +15,7 @@ import {
   MdOutlineFitnessCenter,
   MdVideoLibrary,
 } from "react-icons/md";
-import { FaClock } from "react-icons/fa"; 
+import { FaClock } from "react-icons/fa";
 
 const { Panel } = Collapse;
 
@@ -29,19 +29,27 @@ const categories = [
   { name: "Maishiy texnika", icon: <MdKitchen /> },
   { name: "O‘yin pristavkalari", icon: <MdVideogameAsset /> },
   { name: "Kameralar", icon: <MdCameraAlt /> },
-  { name: "Soatlar va elektron budilniklar", icon: <MdWatch />},
-  { name: "Aqlli uy va xavfsizlik", icon:<MdHomeWork /> },
-  { name: "Aqlli soatlar va fitnes bilaguzuklar", icon: <MdOutlineFitnessCenter /> },
-  { name: "Geymerlar uchun mahsulotlar", icon: <MdVideogameAsset />},
+  { name: "Soatlar va elektron budilniklar", icon: <MdWatch /> },
+  { name: "Aqlli uy va xavfsizlik", icon: <MdHomeWork /> },
+  {
+    name: "Aqlli soatlar va fitnes bilaguzuklar",
+    icon: <MdOutlineFitnessCenter />,
+  },
+  { name: "Geymerlar uchun mahsulotlar", icon: <MdVideogameAsset /> },
   { name: "Televizorlar va videotexnikalar", icon: <MdVideoLibrary /> },
-
-
 ];
-
 
 const brands = ["Apple", "Samsung", "Xiaomi", "Sony", "Asus", "Lenovo", "LG"];
 const colors = ["Qizil", "Ko'k", "Sriq", "Pushti", "Malla", "Oq", "Yashil"];
-const contryes = ["Avstraliya", "Avstriya", "Amerika Samoasi", "Belarusiya", "Bermud orollari", "Buyuk Britaniya", "O'zbekiston"];
+const contryes = [
+  "Avstraliya",
+  "Avstriya",
+  "Amerika Samoasi",
+  "Belarusiya",
+  "Bermud orollari",
+  "Buyuk Britaniya",
+  "O'zbekiston",
+];
 
 const CategoriesSection = () => {
   const [selected, setSelected] = useState([]);
@@ -80,7 +88,11 @@ const CategoriesSection = () => {
           className="mt-6 bg-transparent"
         >
           <Panel
-            header={<span className="font-semibold text-gray-800 text-[16px]">Brend</span>}
+            header={
+              <span className="font-semibold text-gray-800 text-[16px]">
+                Brend
+              </span>
+            }
             key="1"
           >
             <Checkbox.Group
@@ -97,7 +109,11 @@ const CategoriesSection = () => {
           className="mt-6 bg-transparent"
         >
           <Panel
-            header={<span className="font-semibold text-gray-800 text-[16px]">Rang</span>}
+            header={
+              <span className="font-semibold text-gray-800 text-[16px]">
+                Rang
+              </span>
+            }
             key="1"
           >
             <Checkbox.Group
@@ -114,7 +130,11 @@ const CategoriesSection = () => {
           className="mt-6 bg-transparent"
         >
           <Panel
-            header={<span className="font-semibold text-gray-800 text-[16px]">Ishlab chiqarish mamlakati</span>}
+            header={
+              <span className="font-semibold text-gray-800 text-[16px]">
+                Ishlab chiqarish mamlakati
+              </span>
+            }
             key="1"
           >
             <Checkbox.Group
